@@ -31,6 +31,7 @@ end
 def welcome_returning_user(name)
     puts "Glad to see you back #{name}. We love your taste in music."
         display_user_playlist
+
     #Your playlist: show all songs where ID matches user -- > user.playlist 
     #Select from: display all songs 
     #option add song 
@@ -70,3 +71,18 @@ end
 
 # def user_can_delete_playlist 
 # end 
+
+# def search_songs_by_duration(duration)
+#     Song.
+#     #find song by artist 
+# end 
+
+# def user_can_delete_playlist 
+# end 
+
+
+
+    Song Name             Artist  
+01 The Zephyr Song - Red Hot Chile Peppers 
+01 The Zephyr Song - Red Hot Chile Peppers 
+01 The Zephyr Songdhkjhfjhfkjdshkjhkjsdh - Red Hot Chile Peppers 

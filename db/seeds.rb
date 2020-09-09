@@ -1,86 +1,86 @@
 Song.find_or_create_by(
   name: "Snow",
   artist: "Red Hot Chile Peppers",
-  duration: 5
+  duration: 3
   )
 
 Song.find_or_create_by(
   name: "Californication",
   artist: "Red Hot Chile Peppers",
-  duration: 5
+  duration: 3
   )
   
 Song.find_or_create_by(
   name: "Can't Stop",
   artist: "Red Hot Chile Peppers",
-  duration: 5
+  duration: 3
   )
   
 Song.find_or_create_by(
   name: "Otherside",
   artist: "Red Hot Chile Peppers",
-  duration: 5
+  duration: 3
   )
   
 Song.find_or_create_by(
   name: "Scar Tissue",
   artist: "Red Hot Chile Peppers",
-  duration: 5
+  duration: 4
   )
   
 Song.find_or_create_by(
   name: "Under the Bridge",
   artist: "Red Hot Chile Peppers",
-  duration: 5
+  duration: 4
   )
   
 Song.find_or_create_by(
   name: "Dani California",
   artist: "Red Hot Chile Peppers",
-  duration: 5
+  duration: 4
   )
   
 Song.find_or_create_by(
   name: "Dark Necesities",
   artist: "Red Hot Chile Peppers",
-  duration: 5
+  duration: 4
   )
   
 Song.find_or_create_by(
   name: "The Zephyr Song",
   artist: "Red Hot Chile Peppers",
-  duration: 5
+  duration: 2
   )
   
 Song.find_or_create_by(
   name: "By the Way",
   artist: "Red Hot Chile Peppers",
-  duration: 5
+  duration: 2
   )
   
 
 Song.find_or_create_by(
   name: "Don't Forget Me",
-  artist: "Red Hot Chile Peppers",
-  duration: 5
+  artist: "R2d Hot Chile Peppers",
+  duration: 6
   )
   
 Song.find_or_create_by(
   name: "Suck My Kiss",
-  artist: "Red Hot Chile Peppers",
-  duration: 5
+  artist: "R2d Hot Chile Peppers",
+  duration: 6
   )
   
 Song.find_or_create_by(
   name: "The Longest Wave",
   artist: "Red Hot Chile Peppers",
-  duration: 5
+  duration: 6
   )
   
 Song.find_or_create_by(
   name: "Carlie",
   artist: "Red Hot Chile Peppers",
-  duration: 5
+  duration: 6
   )
   
 Song.find_or_create_by(
@@ -177,7 +177,7 @@ Song.find_or_create_by(
 Song.find_or_create_by(
   name: "Go Crazy",
   artist: "Chris Brown",
-  duration: 5
+  duration: 3
   )
   
 
@@ -189,3 +189,4 @@ Song.find_or_create_by(
   User.find_or_create_by(name: "Giulia")
 
   User.find_or_create_by(name: "Sean")
+2

@@ -20,29 +20,19 @@ search_for_user_name(welcome_response)
 
 # def display_all_songs #songs to select from 
 
+# def add_song(song_id)
 
-#User 
-def add_song(song_id)
-    Songplaylist.new(self, song_id)
-    #once first song is added give option to delete 
-end 
+# def remove_song(song_id)
 
-def remove_song(song_id)
-    Songplaylist.destroy(self, song_id)
-    #find by song_id and delete form user playlist 
-end 
+# def search_songs_by_artist(name)
 
-def search_songs_by_artist(name)
-#find song by artist 
-end 
+# def search_songs_by_duration(duration)
 
-def search_songs_by_duration(duration)
-    Song.
-    #find song by artist 
-end 
+#     #find song by artist 
+# end 
 
-def user_can_delete_playlist 
-end 
+# def user_can_delete_playlist 
+# end 
 
 
 #Welcome!
