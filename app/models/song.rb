@@ -6,7 +6,7 @@ end
 
 def display_all_songs #songs to select from 
     #display all songs that are not in user playlist 
-    Playlist.where(user_id = )
+    #Playlist.where(user_id = )
 end 
 
 def display_user_playlist
