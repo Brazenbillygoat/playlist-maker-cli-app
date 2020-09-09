@@ -180,3 +180,12 @@ Song.find_or_create_by(
   duration: 5
   )
   
+
+  #***USERS***
+
+
+  User.find_or_create_by(name: "Hyrum")
+
+  User.find_or_create_by(name: "Giulia")
+
+  User.find_or_create_by(name: "Sean")
