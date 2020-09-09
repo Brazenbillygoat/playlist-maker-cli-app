@@ -1,50 +1,25 @@
+require 'active_record'
+require_relative './app/models/user.rb'
+require_relative './app/models/songplaylist.rb'
+require_relative './app/models/song.rb'
+require_relative './app/models/playlist.rb'
+require_relative './config/environment.rb'
+require 'Pry'
 
-##user.playlists ??
-##user.song ??
 
-welcome
+welcome_response = welcome
 search_for_user_name(welcome_response)
 
 
 
+# def search_for_user_name(name)
 
+# def welcome_returning_user 
 
-def welcome
-puts "Welcome! Please enter your name:"
-welcome_response = gets.chomp
-welcome_response
-end 
+# def create_new user 
 
-def search_for_user_name(name)
-    #user.find_by(name:) 
-    #found --> welcome_returning_user
-    #not found-->create_new 
-end 
+# def display_all_songs #songs to select from 
 
-def welcome_returning_user 
-puts "Glad to see you back #{name}. We love your taste in music."
-    display_all_song 
-#Your playlist: show all songs where ID matches user -- > user.playlist 
-#Select from: display all songs 
-#option add song 
-#option remove song 
-#search song by atrist 
-#search song by duration 
-end 
-
-def create_new user 
-puts "Hello #{name}! We are happy you are joining us. Plese select some songs, and we can get  you started."
-#display all songs 
-#if user has no songs 
-    #option add song 
-    #search song by atrist 
-    #search song by duration 
-end 
-
-def display_all_songs #songs to select from 
-    #display all songs that are not in user playlist 
-    Playlist.where(user_id = )
-end 
 
 #User 
 def add_song(song_id)

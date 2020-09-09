@@ -1,4 +1,4 @@
-class CreateSongPlaylist < ActiveRecord::Migration[5.1]
+class CreateSongPlaylists < ActiveRecord::Migration[5.1]
     def change 
         create_table :songplaylists do |t|
             t.integer :song_id
