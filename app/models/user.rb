@@ -80,9 +80,7 @@ end
 # def user_can_delete_playlist 
 # end 
 
-
-
-    Song Name             Artist  
-01 The Zephyr Song - Red Hot Chile Peppers 
-01 The Zephyr Song - Red Hot Chile Peppers 
-01 The Zephyr Songdhkjhfjhfkjdshkjhkjsdh - Red Hot Chile Peppers 
+#     Song Name             Artist  
+# 01 The Zephyr Song - Red Hot Chile Peppers 
+# 01 The Zephyr Song - Red Hot Chile Peppers 
+# 01 The Zephyr Songdhkjhfjhfkjdshkjhkjsdh - Red Hot Chile Peppers 
