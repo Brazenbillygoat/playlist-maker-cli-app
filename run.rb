@@ -1,8 +1,18 @@
 
 ##user.playlists ??
 ##user.song ??
-def welcome 
+
+welcome
+search_for_user_name(welcome_response)
+
+
+
+
+
+def welcome
 puts "Welcome! Please enter your name:"
+welcome_response = gets.chomp
+welcome_response
 end 
 
 def search_for_user_name(name)
@@ -13,6 +23,7 @@ end
 
 def welcome_returning_user 
 puts "Glad to see you back #{name}. We love your taste in music."
+    display_all_song 
 #Your playlist: show all songs where ID matches user -- > user.playlist 
 #Select from: display all songs 
 #option add song 
@@ -35,20 +46,22 @@ def display_all_songs #songs to select from
     Playlist.where(user_id = )
 end 
 
-def user_can_adds_song(song_id)
+#User 
+def add_song(song_id)
     Songplaylist.new(self, song_id)
     #once first song is added give option to delete 
 end 
 
-def user_can_removes_song(song_id)
-#find by song_id and delete form user playlist 
+def remove_song(song_id)
+    Songplaylist.destroy(self, song_id)
+    #find by song_id and delete form user playlist 
 end 
 
-def user_can_search_songs_by_artist(name)
+def search_songs_by_artist(name)
 #find song by artist 
 end 
 
-def user_can_search_songs_by_duration(duration)
+def search_songs_by_duration(duration)
     Song.
     #find song by artist 
 end 
