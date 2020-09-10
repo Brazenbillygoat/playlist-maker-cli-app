@@ -18,10 +18,10 @@ end
 
 
 
-def display_user_playlists(name)
+def display_user_playlists(user)
     count = 1
     puts "Which playlist do you want to edit?"
-   
+    user_playlists = Playlist.all.select { |pl| pl.user_id == user.id}
     Playlist.all.each do |pl|
   
         puts "#{count} - #{pl.name}"
