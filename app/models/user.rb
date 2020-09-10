@@ -21,7 +21,7 @@ end
 
 def search_for_user_name(name)
     name = format_name_to_titlecase(name)
-    
+  
     if User.find_by(name: name)
         welcome_returning_user(name)
     else
@@ -32,7 +32,7 @@ end
 
 def welcome_returning_user(name)
     puts "Glad to see you back #{name}. We love your taste in music."
-        display_user_playlists(name)
+    display_user_playlists(name)
 
     #Your playlist: show all songs where ID matches user -- > user.playlist 
     #Select from: display all songs 

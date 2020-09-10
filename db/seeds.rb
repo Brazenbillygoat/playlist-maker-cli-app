@@ -198,12 +198,12 @@ Song.find_or_create_by(
   #***PLAYLISTS***
 
 
-Playlist.find_or_create_by(name: "Long Run", user_id "1")
+Playlist.find_or_create_by(name: "Long Run", user_id: "1")
 
-Playlist.find_or_create_by(name: "Short Run", user_id "1")
+Playlist.find_or_create_by(name: "Short Run", user_id: "1")
 
-Playlist.find_or_create_by(name: "Coding Jam", user_id "2")
+Playlist.find_or_create_by(name: "Coding Jam", user_id: "2")
 
-Playlist.find_or_create_by(name: "Wine O'clock", user_id "2")
+Playlist.find_or_create_by(name: "Wine O'clock", user_id: "2")
 
-Playlist.find_or_create_by(name: "Gym Jams", user_id "3")
+Playlist.find_or_create_by(name: "Gym Jams", user_id: "3")

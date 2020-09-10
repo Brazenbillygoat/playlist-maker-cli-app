@@ -1,3 +1,5 @@
+require_relative '../../config/environment.rb'
+
 class Song < ActiveRecord::Base
     has_many :songplaylists
     has_many :playlists, through: :songplaylists 
@@ -19,16 +21,17 @@ end
 def display_user_playlists(name)
     count = 1
     puts "Which playlist do you want to edit?"
-
+    binding.pry
     Playlist.all.each do |pl|
+        binding.pry
         puts "#{count} - #{pl.name}"
         count += 1
     end
     
 end
 
-playlist_selection = gets.chomp
-playlist_name = Playlist.all[playlist_selection.to_i - 1]
+# playlist_selection = gets.chomp
+# playlist_name = Playlist.all[playlist_selection.to_i - 1]
 
 def display_playlist_songs(playlist)
     count = 1
@@ -40,7 +43,7 @@ def display_playlist_songs(playlist)
 end
 
 
-display_playlist_songs(playlist_selection)
+# display_playlist_songs(playlist_selection)
 
 
 
