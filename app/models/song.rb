@@ -7,12 +7,14 @@ class Song < ActiveRecord::Base
 
 end
 
-def self.display_all_songs 
-    self.all.each do |song|
+def display_all_songs 
+
+    Song.all.each do |song|
+        puts "#{song.id} #{song.name} - #{song.artist}"
         title = song.name 
         artist = song.artist 
         song = song.duration
-    binding.pry
+       
     end 
 end 
 
@@ -29,8 +31,6 @@ def display_user_playlists(user)
     end
     puts "#{count} - Build a new playlist."
 
-    # playlist_selection = gets.chomp
-    # return playlist_selection
 end
 
 #display_playlist_songs(playlist_selection)

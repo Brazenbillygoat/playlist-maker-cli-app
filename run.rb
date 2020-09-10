@@ -28,7 +28,22 @@ crud_options_for_existing_playlist() #asks: "What would you like to do:
                                              #"2 - Delete a song"
                                              #"3 - That's good for now"
 
-crud_choice = gets.chomp
+crud_choice = gets.chomp.to_i
+
+if crud_choice == 1
+     display_all_songs()
+     puts "Enter the number of the song that you would like to add?"
+     add_a_song(song_number)
+elsif crud_choice == 2
+     display_all_songs
+
+elsif crud_choice == 3
+     puts "Enjoy your tunes!"
+# else
+#      puts "That is not an option."
+
+end
+
 
 
 

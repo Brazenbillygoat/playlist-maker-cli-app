@@ -22,7 +22,6 @@ end
 def search_for_user_name(user)
   
     if User.all.include?(user)
-        # user = User.find_by(name: name)
         welcome_returning_user(user)
     else
         create_new_user(name)
