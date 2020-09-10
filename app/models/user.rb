@@ -32,7 +32,7 @@ end
 
 def welcome_returning_user(name)
     puts "Glad to see you back #{name}. We love your taste in music."
-        display_user_playlist
+        display_user_playlists(name)
 
     #Your playlist: show all songs where ID matches user -- > user.playlist 
     #Select from: display all songs 
