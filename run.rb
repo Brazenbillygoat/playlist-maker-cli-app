@@ -9,19 +9,13 @@ require_relative './app/models/playlist.rb'
 require_relative './config/environment.rb'
 require 'Pry'
 
-
 welcome_response = welcome()
 
 name = format_name_to_titlecase(welcome_response)
+
+search_for_name(name)
+
 user = User.find_by(name: name)
-
-search_for_user_name(user)
-
-display_user_playlists(user) # Shows "Which playlist do you want to edit?"
-
-playlist = gets.chomp
-
-display_playlist_songs(playlist.to_i - 1) # Shows all the songs on th eselected playlist
 
 creating = true
 while creating

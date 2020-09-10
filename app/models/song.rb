@@ -35,8 +35,6 @@ end
 
 #display_playlist_songs(playlist_selection)
 
-
-
 # playlist_name = Playlist.all[playlist_selection.to_i - 1]
 
 def display_playlist_songs(playlist)
@@ -48,11 +46,6 @@ def display_playlist_songs(playlist)
     end
 
 end
-
-
-
-
-
 
 # def can_be_instantiated_and_then_saved 
 #     playlistone = Playlist.create 
