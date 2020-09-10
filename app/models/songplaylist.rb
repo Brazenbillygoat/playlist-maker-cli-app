@@ -16,8 +16,6 @@ def crud_options_for_new_playlist
     puts "3 - That's good for now"
 end
 
-def add_a_song(song_number)
 
-end
 
 

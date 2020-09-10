@@ -5,6 +5,10 @@ require 'active_record'
 class User < ActiveRecord::Base
     has_many :playlists
 
+    def add_a_song(song_number)
+        
+    end
+
 end
 
 def welcome
