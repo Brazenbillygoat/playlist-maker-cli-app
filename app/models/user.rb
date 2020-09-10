@@ -1,4 +1,5 @@
 # require 'active_record'
+require_relative './song.rb'
 
 class User < ActiveRecord::Base
     has_many :playlists

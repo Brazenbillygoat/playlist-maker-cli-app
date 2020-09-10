@@ -3,9 +3,8 @@ class Song < ActiveRecord::Base
     has_many :playlists, through: :songplaylists 
 
 
-def display_all_songs #songs to select from 
-    #display all songs that are not in user playlist 
-    #Playlist.where(user_id = )
+end
+
 def self.display_all_songs 
     self.all.each do |song|
         title = song.name 
@@ -15,13 +14,34 @@ def self.display_all_songs
     end 
 end 
 
-##Title: Songs, Artist: Red Hot Chile Peppers, Duration: 5  
 
-end 
 
-# def display_user_playlist
+def display_user_playlists(name)
+    count = 1
+    puts "Which playlist do you want to edit?"
 
-# end
+    Playlist.all.each do |pl|
+        puts "#{count} - #{pl.name}"
+        count += 1
+    end
+    
+end
+
+playlist_selection = gets.chomp
+playlist_name = Playlist.all[playlist_selection.to_i - 1]
+
+def display_playlist_songs(playlist)
+    count = 1
+
+    Playlist.all[playlist].songs.each do |song|
+        puts "#{count} #{song.name} - #{song.artist}"
+        count += 1
+    end
+end
+
+
+display_playlist_songs(playlist_selection)
+
 
 
 # def can_be_instantiated_and_then_saved 
