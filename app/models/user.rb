@@ -1,5 +1,6 @@
-# require 'active_record'
-require_relative './song.rb'
+require 'active_record'
+# require_relative './song.rb'
+#Dir[File.join(__dir__, './', '*.rb')].each { |file| require file }
 
 class User < ActiveRecord::Base
     has_many :playlists

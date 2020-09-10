@@ -1,3 +1,5 @@
+#***SONGS***
+
 Song.find_or_create_by(
   name: "Snow",
   artist: "Red Hot Chile Peppers",
@@ -181,6 +183,7 @@ Song.find_or_create_by(
   )
   
 
+
   #***USERS***
 
 
@@ -189,4 +192,18 @@ Song.find_or_create_by(
   User.find_or_create_by(name: "Giulia")
 
   User.find_or_create_by(name: "Sean")
-2
+
+
+
+  #***PLAYLISTS***
+
+
+Playlist.find_or_create_by(name: "Long Run", user_id "1")
+
+Playlist.find_or_create_by(name: "Short Run", user_id "1")
+
+Playlist.find_or_create_by(name: "Coding Jam", user_id "2")
+
+Playlist.find_or_create_by(name: "Wine O'clock", user_id "2")
+
+Playlist.find_or_create_by(name: "Gym Jams", user_id "3")

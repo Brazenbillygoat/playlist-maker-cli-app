@@ -1,8 +1,9 @@
 require 'active_record'
-require_relative './app/models/user.rb'
-require_relative './app/models/songplaylist.rb'
-require_relative './app/models/song.rb'
-require_relative './app/models/playlist.rb'
+# require_relative './app/models/user.rb'
+# require_relative './app/models/songplaylist.rb'
+# require_relative './app/models/song.rb'
+# require_relative './app/models/playlist.rb'
+Dir[File.join(__dir__, './app/models/', '*.rb')].each { |file| require file }
 require_relative './config/environment.rb'
 require 'Pry'
 
