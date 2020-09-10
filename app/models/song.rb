@@ -21,9 +21,9 @@ end
 def display_user_playlists(name)
     count = 1
     puts "Which playlist do you want to edit?"
-    binding.pry
+   
     Playlist.all.each do |pl|
-        binding.pry
+  
         puts "#{count} - #{pl.name}"
         count += 1
     end
