@@ -19,11 +19,10 @@ def format_name_to_titlecase(name)
     title_format = name_formatting.join(" ")
 end
 
-def search_for_user_name(name)
-    name = format_name_to_titlecase(name)
+def search_for_user_name(user)
   
-    if User.find_by(name: name)
-        user = User.find_by(name: name)
+    if User.all.include?(user)
+        # user = User.find_by(name: name)
         welcome_returning_user(user)
     else
         create_new_user(name)
@@ -32,14 +31,8 @@ def search_for_user_name(name)
 end 
 
 def welcome_returning_user(user)
-    binding.pry
     puts "Glad to see you back #{user.name}. We love your taste in music."
-    display_user_playlists(user)
-
-    #Your playlist: show all songs where ID matches user -- > user.playlist 
-    #Select from: display all songs 
-    #option add song 
-    #option remove song 
+    
     #search song by atrist 
     #search song by duration 
 end 

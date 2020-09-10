@@ -10,8 +10,39 @@ require_relative './config/environment.rb'
 require 'Pry'
 
 
-welcome_response = welcome
-search_for_user_name(welcome_response)
+welcome_response = welcome()
+
+name = format_name_to_titlecase(welcome_response)
+user = User.find_by(name: name)
+
+search_for_user_name(user)
+
+display_user_playlists(user) # Shows "Which playlist do you want to edit?"
+
+playlist = gets.chomp
+
+display_playlist_songs(playlist.to_i - 1) # Shows all the songs on th eselected playlist
+
+crud_options_for_existing_playlist() #asks: "What would you like to do:
+                                             #"1 - Add a song"
+                                             #"2 - Delete a song"
+                                             #"3 - That's good for now"
+
+crud_choice = gets.chomp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
