@@ -14,15 +14,10 @@ welcome_response = welcome()
 name = format_name_to_titlecase(welcome_response)
 
 playlist_id = search_for_name(name)
-current_playlist = Playlist.find(playlist_id)
 
 user = User.find_by(name: name)
 
-# playlist = current_playlist_being_edited(user)
-# playlist_choice = search_for_name(name)
-# user_playlists = Playlist.all.select { |pl| pl.user_id == user.id}
-# puts user_playlists[playlist_choice - 1].name
-
+current_playlist = user.playlists[playlist_id - 1]
 
 creating = true
 while creating
@@ -31,6 +26,7 @@ while creating
                                                   #"1 - Add a song"
                                                   #"2 - Delete a song"
                                                   #"3 - Create new playlist"
+                                                  #"4 - View my playlists"
                                                   #"4 - That's good for now"
      crud_choice = gets.chomp.to_i
 
@@ -44,16 +40,16 @@ while creating
                puts "Enter the number of the song that you would like to add?"
                song_choice = gets.chomp.to_i
                current_playlist.add_a_song(song_choice)
-               display_playlist_songs(playlist_id)
+               current_playlist.display_playlist_songs(playlist_id)
           elsif crud_choice == 2
                puts "Enter the number of the song that you would like to delete?"
                song_choice = gets.chomp.to_i
                current_playlist.delete_song(song_choice)
-               display_playlist_songs(playlist_id)
+               current_playlist.display_playlist_songs(playlist_id)
           elsif crud_choice == 3
                create_new_playlist(user) 
           elsif crud_choice == 4
-               display_user_playlists(user) #working on 
+               current_playlist.display_user_playlists(playlist_id)
           else crud_choice == 5
                puts "Enjoy your tunes!"
                creating = false 
