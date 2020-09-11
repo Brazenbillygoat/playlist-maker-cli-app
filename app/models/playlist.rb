@@ -23,6 +23,8 @@ class Playlist < ActiveRecord::Base
     end
 end
 
+
+
 def create_new_playlist(user)
     puts "What would you like your playlist to be called?"
     new_playlist_name = gets.chomp

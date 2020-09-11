@@ -1,10 +1,11 @@
 require 'active_record'
-# require_relative '../../run.rb'
-# require_relative './song.rb'
+
 
 class User < ActiveRecord::Base
     has_many :playlists
 end
+
+
 
 def welcome
     puts "Welcome! Please enter your name:"
@@ -31,14 +32,15 @@ def search_for_name(name)
             puts "\nYour do not have any playlists."
         else
             current_playlist = user_playlists[playlist - 1]
-            current_playlist.display_playlist_songs(playlist) # Shows all the songs on the selected playlist
+            current_playlist.display_playlist_songs(playlist)
         end 
         return playlist
     else
         new_playlist_id = create_new_user(name)
         return new_playlist_id
     end
-end 
+end
+ 
 def welcome_returning_user(user)
     puts "\nGlad to see you back #{user.name}. We love your taste in music."
 end 

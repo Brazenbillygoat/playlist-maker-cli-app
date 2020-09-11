@@ -3,6 +3,8 @@ class Songplaylist < ActiveRecord::Base
     belongs_to :playlist
 end 
 
+
+
 def crud_options_for_new_playlist
     puts "What would you like to do:"
     puts "1 - Add a song"

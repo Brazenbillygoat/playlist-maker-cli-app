@@ -1,5 +1,5 @@
 require_relative '../../config/environment.rb'
-# require_relative '../../run.rb'
+
 
 class Song < ActiveRecord::Base
     has_many :songplaylists
@@ -7,6 +7,8 @@ class Song < ActiveRecord::Base
 
 
 end
+
+
 
 def display_all_songs 
     puts "\nSong Choices:"
