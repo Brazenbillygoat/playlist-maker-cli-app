@@ -4,7 +4,6 @@ require 'active_record'
 
 class User < ActiveRecord::Base
     has_many :playlists
-
 end
 
 def welcome
@@ -23,12 +22,14 @@ def search_for_name(name)
     user = User.find_by(name: name)
     if User.find_by(name: name)
         welcome_returning_user(user)
-        display_user_playlists(user)
-        playlist = gets.chomp.to_i + 1
-        display_playlist_songs(user, playlist - 1) # Shows all the songs on the selected playlist
-        return playlist - 1
+        user_playlists = display_user_playlists(user)
+        playlist = gets.chomp.to_i
+        current_playlist = user_playlists[playlist - 1]
+        current_playlist.display_playlist_songs(playlist) # Shows all the songs on the selected playlist
+        return playlist
     else
-        create_new_user(name)
+        new_playlist_id = create_new_user(name)
+        return new_playlist_id
     end
 end 
 def welcome_returning_user(user)
@@ -38,6 +39,6 @@ end
 def create_new_user(name) 
     new_user = User.create(name: name)
     puts "\nHello #{new_user.name}! We are happy you are joining us."
-    create_new_playlist(new_user)
+    return new_playlist_id = create_new_playlist(new_user)
 end 
  
