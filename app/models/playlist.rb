@@ -27,6 +27,7 @@ def create_new_playlist(user)
     puts "What would you like your playlist to be called?"
     new_playlist_name = gets.chomp
     new_playlist = Playlist.create(name: new_playlist_name, user_id: user.id)
+    user.playlists.push(new_playlist)
     puts "\n" + new_playlist_name + ", was created!\n"
     return new_playlist.id
 end

@@ -47,7 +47,10 @@ while creating
                current_playlist.delete_song(song_choice)
                current_playlist.display_playlist_songs(playlist_id)
           elsif crud_choice == 3
-               create_new_playlist(user) 
+               create_new_playlist(user)
+               playlist_id = display_user_playlists(user)
+               current_playlist = user.playlists[playlist_id - 1]
+               current_playlist.display_playlist_songs(playlist_id)
           elsif crud_choice == 4
                playlist_id = display_user_playlists(user)
                current_playlist = user.playlists[playlist_id - 1]
