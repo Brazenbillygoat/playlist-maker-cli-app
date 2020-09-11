@@ -13,6 +13,13 @@ class User < ActiveRecord::Base
         end
     end
 
+    # def current_playlist_being_edited(user)
+    #     binding.pry
+    #     playlist_choice = search_for_name(user.name)
+    #     user_playlists = Playlist.all.select { |pl| pl.user_id == user.id}
+    #     return user_playlists[playlist_choice - 1]
+    # end
+
 end
 
 def welcome
@@ -34,7 +41,7 @@ def search_for_name(name)
         display_user_playlists(user)
         playlist = gets.chomp.to_i
         display_playlist_songs(playlist - 1) # Shows all the songs on the selected playlist
-        return playlist
+        # return playlist
     else
         create_new_user(name)
     end
