@@ -10,3 +10,4 @@ def create_new_playlist(user)
     Playlist.create(name: new_playlist_name, user_id: user.id)
     puts "\n" + new_playlist_name + ", was created!\n"
 end
+

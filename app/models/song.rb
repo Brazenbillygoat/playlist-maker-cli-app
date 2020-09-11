@@ -19,8 +19,7 @@ def display_all_songs
 end 
 
 
-
-def display_user_playlists(user)
+def display_user_playlists(user) # once user selects a playlist what happens? 
     count = 1
     puts "Which playlist do you want to edit?"
     user_playlists = Playlist.all.select { |pl| pl.user_id == user.id}
@@ -29,9 +28,8 @@ def display_user_playlists(user)
         puts "#{count} - #{pl.name}"
         count += 1
     end
-    puts "#{count} - Build a new playlist."
-
-end
+    puts "#{count} - Create a new playlist." #3
+end 
 
 #display_playlist_songs(playlist_selection)
 
@@ -46,6 +44,7 @@ def display_playlist_songs(playlist)
     end
 
 end
+
 
 # def can_be_instantiated_and_then_saved 
 #     playlistone = Playlist.create 
