@@ -24,14 +24,13 @@ def search_for_name(name)
     if User.find_by(name: name)
         welcome_returning_user(user)
         display_user_playlists(user)
-        playlist = gets.chomp.to_i
-        display_playlist_songs(playlist - 1) # Shows all the songs on the selected playlist
+        playlist = gets.chomp.to_i + 1
+        display_playlist_songs(user, playlist - 1) # Shows all the songs on the selected playlist
         return playlist - 1
     else
         create_new_user(name)
     end
 end 
-
 def welcome_returning_user(user)
     puts "\nGlad to see you back #{user.name}. We love your taste in music."
 end 
@@ -42,18 +41,3 @@ def create_new_user(name)
     create_new_playlist(new_user)
 end 
  
-
-def search_songs_by_artist(name)
-    #find song by artist 
-end 
-
-# def search_songs_by_duration(duration)
-#     #find song by artist 
-# end 
-# def user_can_delete_playlist 
-# end 
-# def search_songs_by_duration(duration)
-#     #find song by artist 
-# end 
-# def user_can_delete_playlist 
-#end 

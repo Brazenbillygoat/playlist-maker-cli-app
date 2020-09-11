@@ -5,7 +5,7 @@ class Playlist < ActiveRecord::Base
 
     def add_a_song(song_number)
         Playlist.all.each do |pl|
-          
+          binding.pry
             if self == pl
               
                 pl.songs.push(Song.find(song_number))
@@ -20,7 +20,6 @@ class Playlist < ActiveRecord::Base
             end
         end
     end
-   
 end
 
 def create_new_playlist(user)

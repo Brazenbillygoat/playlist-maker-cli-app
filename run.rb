@@ -44,16 +44,18 @@ while creating
                puts "Enter the number of the song that you would like to add?"
                song_choice = gets.chomp.to_i
                current_playlist.add_a_song(song_choice)
-               display_playlist_songs(playlist_id)
+               display_playlist_songs(user, playlist_id)
           elsif crud_choice == 2
                puts "Enter the number of the song that you would like to delete?"
                song_choice = gets.chomp.to_i
                current_playlist.delete_song(song_choice)
-               display_playlist_songs(playlist_id)
+               display_playlist_songs(user, playlist_id) #ID start at 1
           elsif crud_choice == 3
                create_new_playlist(user) 
           elsif crud_choice == 4
-               display_user_playlists(user) #working on 
+               display_user_playlists(user) 
+               playlist = gets.chomp.to_i ####
+               display_playlist_songs(playlist)
           else crud_choice == 5
                puts "Enjoy your tunes!"
                creating = false 
