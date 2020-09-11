@@ -14,7 +14,6 @@ class Playlist < ActiveRecord::Base
     def display_playlist_songs(playlist_id)
         count = 1
         puts "\n#{self.name}:"
-        binding.pry
         self.songs.each do |song|
             puts "#{count} #{song.name} - #{song.artist}"
             count += 1
