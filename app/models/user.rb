@@ -24,8 +24,11 @@ def search_for_name(name)
         welcome_returning_user(user)
         user_playlists = user.playlists
         playlist = display_user_playlists(user)
+        if playlist == user.playlists.length + 1
+            create_new_playlist(user)
+        end
         if user_playlists == nil
-            puts "\nYour playlist does not have any songs."
+            puts "\nYour do not have any playlists."
         else
             current_playlist = user_playlists[playlist - 1]
             current_playlist.display_playlist_songs(playlist) # Shows all the songs on the selected playlist

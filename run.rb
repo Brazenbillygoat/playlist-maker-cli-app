@@ -53,6 +53,9 @@ while creating
                current_playlist.display_playlist_songs(playlist_id)
           elsif crud_choice == 4
                playlist_id = display_user_playlists(user)
+               if playlist_id == user.playlists.length + 1
+                    create_new_playlist(user)
+                end
                current_playlist = user.playlists[playlist_id - 1]
                current_playlist.display_playlist_songs(playlist_id) 
           else crud_choice == 5
