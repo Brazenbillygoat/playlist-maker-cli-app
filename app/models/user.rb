@@ -22,10 +22,14 @@ def search_for_name(name)
     user = User.find_by(name: name)
     if User.find_by(name: name)
         welcome_returning_user(user)
-        user_playlists = display_user_playlists(user)
-        playlist = gets.chomp.to_i
-        current_playlist = user_playlists[playlist - 1]
-        current_playlist.display_playlist_songs(playlist) # Shows all the songs on the selected playlist
+        user_playlists = user.playlists
+        playlist = display_user_playlists(user)
+        if user_playlists == nil
+            puts "\nYour playlist does not have any songs."
+        else
+            current_playlist = user_playlists[playlist - 1]
+            current_playlist.display_playlist_songs(playlist) # Shows all the songs on the selected playlist
+        end 
         return playlist
     else
         new_playlist_id = create_new_user(name)

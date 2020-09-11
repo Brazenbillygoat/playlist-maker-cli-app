@@ -14,7 +14,7 @@ def crud_options_for_existing_playlist
     puts "1 - Add a song"
     puts "2 - Delete a song"
     puts "3 - Create new playlist"
-    puts "4 - View my playlists"
+    puts "4 - Edit another playlist"
     puts "5 - That's good for now"
 end
 

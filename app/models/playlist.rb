@@ -40,13 +40,12 @@ end
 def display_user_playlists(user) # once user selects a playlist what happens? 
     count = 1
     puts "\nWhich playlist do you want to edit?"
-    user_playlists = Playlist.all.select { |pl| pl.user_id == user.id}
-    user_playlists.each do |pl|
+    user.playlists.each do |pl|
 
         puts "#{count} - #{pl.name}" #select with count number 
         count += 1
     end
     puts "#{count} - Create a new playlist.\n" #3
-    return user_playlists
+    return playlist = gets.chomp.to_i
 end 
 

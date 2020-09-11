@@ -49,7 +49,9 @@ while creating
           elsif crud_choice == 3
                create_new_playlist(user) 
           elsif crud_choice == 4
-               current_playlist.display_user_playlists(playlist_id)
+               playlist_id = display_user_playlists(user)
+               current_playlist = user.playlists[playlist_id - 1]
+               current_playlist.display_playlist_songs(playlist_id) 
           else crud_choice == 5
                puts "Enjoy your tunes!"
                creating = false 
