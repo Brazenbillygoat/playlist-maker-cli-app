@@ -24,11 +24,21 @@ def display_user_playlists(user) # once user selects a playlist what happens?
     puts "Which playlist do you want to edit?"
     user_playlists = Playlist.all.select { |pl| pl.user_id == user.id}
     user_playlists.each do |pl|
-  
-        puts "#{count} - #{pl.name}"
+
+        puts "#{count} - #{pl.name}" #select with count number 
         count += 1
     end
     puts "#{count} - Create a new playlist." #3
+    
+end 
+
+def display_songs_in_playlist(user)
+    
+    
+    user_playlists = index 
+    
+    user_playlist[i-0]
+
 end 
 
 #display_playlist_songs(playlist_selection)

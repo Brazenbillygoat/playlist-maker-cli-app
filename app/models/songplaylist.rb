@@ -16,7 +16,6 @@ def crud_options_for_existing_playlist
     puts "3 - Create new playlist"
     puts "4 - View my playlists"
     puts "5 - That's good for now"
-    #view playlist 
 end
 
 

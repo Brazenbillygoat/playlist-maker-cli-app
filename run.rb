@@ -25,11 +25,13 @@ while creating
                                                   #"2 - Delete a song"
                                                   #"3 - Create new playlist"
                                                   #"4 - That's good for now"
-     crud_choice = gets.chomp
-     if crud_choice != (1...5)
+     crud_choice = gets.chomp.to_i
+
+     if  !((1..5) === crud_choice)
+          
           puts "That is not an option.\n"
      else
-          crud_choice = gets.chomp.to_i
+
           if crud_choice == 1
                display_all_songs()
                puts "Enter the number of the song that you would like to add?"
