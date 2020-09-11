@@ -3,6 +3,23 @@ class Playlist < ActiveRecord::Base
     has_many :songplaylists
     has_many :songs, through: :songplaylists   
 
+    def add_a_song(song_number)
+        Playlist.all.each do |pl|
+          
+            if self == pl
+              
+                pl.songs.push(Song.find(song_number))
+            end
+        end
+    end
+
+    def delete_song(song_number)
+        Playlist.all.each do |pl|
+            if self == pl
+                pl.songs.delete(Song.find(song_number))
+            end
+        end
+    end
    
 end
 
@@ -14,7 +31,7 @@ def create_new_playlist(user)
 end
 
 def current_playlist_being_edited(user)
-    binding.pry
+  
     playlist_choice = search_for_name(user.name)
     user_playlists = Playlist.all.select { |pl| pl.user_id == user.id}
     return user_playlists[playlist_choice - 1]

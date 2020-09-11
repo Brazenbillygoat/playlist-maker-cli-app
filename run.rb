@@ -1,19 +1,20 @@
 
 require 'active_record'
+require 'Pry'
+
 require_relative './app/models/user.rb'
 require_relative './app/models/songplaylist.rb'
 require_relative './app/models/song.rb'
 require_relative './app/models/playlist.rb'
-
-#Dir[File.join(__dir__, './app/models/', '*.rb')].each { |file| require file }
 require_relative './config/environment.rb'
-require 'Pry'
+
 
 welcome_response = welcome()
 
 name = format_name_to_titlecase(welcome_response)
 
-search_for_name(name)
+playlist_id = search_for_name(name)
+current_playlist = Playlist.find(playlist_id)
 
 user = User.find_by(name: name)
 
@@ -42,9 +43,13 @@ while creating
                display_all_songs()
                puts "Enter the number of the song that you would like to add?"
                song_choice = gets.chomp.to_i
-               user.add_a_song(song_choice)
+               current_playlist.add_a_song(song_choice)
+               display_playlist_songs(playlist_id)
           elsif crud_choice == 2
-               display_all_songs
+               puts "Enter the number of the song that you would like to delete?"
+               song_choice = gets.chomp.to_i
+               current_playlist.delete_song(song_choice)
+               display_playlist_songs(playlist_id)
           elsif crud_choice == 3
                create_new_playlist(user) 
           elsif crud_choice == 4

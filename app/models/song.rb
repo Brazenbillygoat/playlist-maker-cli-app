@@ -1,4 +1,5 @@
 require_relative '../../config/environment.rb'
+# require_relative '../../run.rb'
 
 class Song < ActiveRecord::Base
     has_many :songplaylists
@@ -28,22 +29,9 @@ def display_user_playlists(user) # once user selects a playlist what happens?
         puts "#{count} - #{pl.name}" #select with count number 
         count += 1
     end
-    puts "#{count} - Create a new playlist." #3
+    puts "#{count} - Create a new playlist.\n" #3
     
 end 
-
-def display_songs_in_playlist(user)
-    
-    
-    user_playlists = index 
-    
-    user_playlist[i-0]
-
-end 
-
-#display_playlist_songs(playlist_selection)
-
-# playlist_name = Playlist.all[playlist_selection.to_i - 1]
 
 def display_playlist_songs(playlist)
     count = 1
@@ -54,9 +42,4 @@ def display_playlist_songs(playlist)
     end
 
 end
-
-
-# def can_be_instantiated_and_then_saved 
-#     playlistone = Playlist.create 
-# end 
 

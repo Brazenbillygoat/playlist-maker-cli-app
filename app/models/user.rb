@@ -1,24 +1,9 @@
 require 'active_record'
+# require_relative '../../run.rb'
 # require_relative './song.rb'
-#Dir[File.join(__dir__, './', '*.rb')].each { |file| require file }
 
 class User < ActiveRecord::Base
     has_many :playlists
-
-    def add_a_song(song_number)
-        Playlist.all.each do |pl|
-            if self == pl.user
-                pl.songs.push(Song.find(song_number))
-            end
-        end
-    end
-
-    # def current_playlist_being_edited(user)
-    #     binding.pry
-    #     playlist_choice = search_for_name(user.name)
-    #     user_playlists = Playlist.all.select { |pl| pl.user_id == user.id}
-    #     return user_playlists[playlist_choice - 1]
-    # end
 
 end
 
@@ -41,14 +26,14 @@ def search_for_name(name)
         display_user_playlists(user)
         playlist = gets.chomp.to_i
         display_playlist_songs(playlist - 1) # Shows all the songs on the selected playlist
-        # return playlist
+        return playlist - 1
     else
         create_new_user(name)
     end
 end 
 
 def welcome_returning_user(user)
-    puts "Glad to see you back #{user.name}. We love your taste in music."
+    puts "\nGlad to see you back #{user.name}. We love your taste in music."
 end 
 
 def create_new_user(name) 
