@@ -6,7 +6,11 @@ class User < ActiveRecord::Base
     has_many :playlists
 
     def add_a_song(song_number)
-        
+        Playlist.all.each do |pl|
+            if self == pl.user
+                pl.songs.push(Song.find(song_number))
+            end
+        end
     end
 
 end
@@ -28,8 +32,9 @@ def search_for_name(name)
     if User.find_by(name: name)
         welcome_returning_user(user)
         display_user_playlists(user)
-        playlist = gets.chomp
-        display_playlist_songs(playlist.to_i - 1) # Shows all the songs on th eselected playlist
+        playlist = gets.chomp.to_i
+        display_playlist_songs(playlist - 1) # Shows all the songs on the selected playlist
+        return playlist
     else
         create_new_user(name)
     end

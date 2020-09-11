@@ -13,9 +13,13 @@ welcome_response = welcome()
 
 name = format_name_to_titlecase(welcome_response)
 
-search_for_name(name)
-
 user = User.find_by(name: name)
+
+playlist = current_playlist_being_edited(user)
+# playlist_choice = search_for_name(name)
+# user_playlists = Playlist.all.select { |pl| pl.user_id == user.id}
+# puts user_playlists[playlist_choice - 1].name
+
 
 creating = true
 while creating
@@ -32,6 +36,7 @@ while creating
           puts "Enter the number of the song that you would like to add?"
           song_choice = gets.chomp.to_i
           user.add_a_song(song_choice)
+          current_playlist_being_edited(playlist)
      elsif crud_choice == 2
           display_all_songs
 
