@@ -63,17 +63,12 @@ def search_songs_by_artist(name)
 end 
 
 # def search_songs_by_duration(duration)
-#     Song.
 #     #find song by artist 
 # end 
-
 # def user_can_delete_playlist 
 # end 
-
 # def search_songs_by_duration(duration)
-#     Song.
 #     #find song by artist 
 # end 
-
 # def user_can_delete_playlist 
-# end 
+#end 

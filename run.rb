@@ -29,26 +29,32 @@ while creating
      crud_options_for_existing_playlist() #asks: "What would you like to do:
                                                   #"1 - Add a song"
                                                   #"2 - Delete a song"
-                                                  #"3 - That's good for now"
-
+                                                  #"3 - Create new playlist"
+                                                  #"4 - That's good for now"
      crud_choice = gets.chomp.to_i
 
-     if crud_choice == 1
-          display_all_songs()
-          puts "Enter the number of the song that you would like to add?"
-          song_choice = gets.chomp.to_i
-          user.add_a_song(song_choice)
-          # current_playlist_being_edited(playlist)
-     elsif crud_choice == 2
-          display_all_songs
+     if  !((1..5) === crud_choice)
+          
+          puts "That is not an option.\n"
+     else
 
-     elsif crud_choice == 3
-          puts "Enjoy your tunes!"
-          creating = false
-     # else
-     #      puts "That is not an option."
-
+          if crud_choice == 1
+               display_all_songs()
+               puts "Enter the number of the song that you would like to add?"
+               song_choice = gets.chomp.to_i
+               user.add_a_song(song_choice)
+          elsif crud_choice == 2
+               display_all_songs
+          elsif crud_choice == 3
+               create_new_playlist(user) 
+          elsif crud_choice == 4
+               display_user_playlists(user) #working on 
+          else crud_choice == 5
+               puts "Enjoy your tunes!"
+               creating = false 
+          end 
      end
+
 end
 
 
@@ -68,41 +74,7 @@ end
 
 
 
-# def search_for_user_name(name)
-
-# def welcome_returning_user 
-
-# def create_new user 
-
-# def display_all_songs #songs to select from 
-
-# def add_song(song_id)
-
-# def remove_song(song_id)
-
-# def search_songs_by_artist(name)
-
-# def search_songs_by_duration(duration)
-
-#     #find song by artist 
-# end 
-
-# def user_can_delete_playlist 
-# end 
 
 
-#Welcome!
-#user inputs name 
-#Crossrefernce name with data base 
-    #If name is in database show user playlist and additional song selection
-            #User can delete songs from playlist 
-                 #DELETE songplaylist relationship is deleted
-
-            #User can add songs to playlist 
-                 #ADD songplaylist is created connected user ID to song ID
-
-
-    #If name is not in database show songs for user to select from 
-        #User can add songs to playlist 
 
 
