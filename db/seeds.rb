@@ -193,6 +193,8 @@ Song.find_or_create_by(
 
   User.find_or_create_by(name: "Sean")
 
+  User.find_or_create_by(name: "Paul")
+
 
 
   #***PLAYLISTS***
@@ -207,3 +209,9 @@ Playlist.find_or_create_by(name: "Coding Jam", user_id: "2")
 Playlist.find_or_create_by(name: "Wine O'clock", user_id: "2")
 
 Playlist.find_or_create_by(name: "Gym Jams", user_id: "3")
+
+Playlist.find_or_create_by(name: "The Cat's Meow", user_id: "4")
+
+Playlist.find_or_create_by(name: "Rory's Travelling Hits", user_id: "4")
+
+Playlist.find_or_create_by(name: "Jess' Cool Tunes", user_id: "4")
